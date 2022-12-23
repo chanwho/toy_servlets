@@ -20,7 +20,10 @@ public class DetailServlet extends HttpServlet{
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String ORDERS = request.getParameter("ORDERS"); // 파라메터 받아옴
         
-
+        if (ORDERS == null){
+            ORDERS = "1";
+        }
+        
         // DB에서 데이터 받아옴
         GetDBWithPoll getDBWithPoll = new GetDBWithPoll();
         HashMap<String, Object> question = new HashMap<>();

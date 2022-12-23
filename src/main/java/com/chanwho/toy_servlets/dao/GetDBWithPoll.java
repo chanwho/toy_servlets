@@ -31,7 +31,6 @@ public class GetDBWithPoll {
                 ArrayList<HashMap> exampleArray = new ArrayList<>();
                 HashMap<String, Object> exampleDataHash = null;
 
-
                 for (int i = 1; i<6; i++){
                         exampleDataHash = new HashMap<>();
                         String query = "select * from example_list where ORDERS = '"+ Integer.toString(i)+"';";
@@ -47,7 +46,7 @@ public class GetDBWithPoll {
 
                 return exampleArray;
         }
-        public HashMap<String, Object> getQuestioniAnswer(String QUESTIONS_UID) throws SQLException{
+        public HashMap<String, Object> getQuestionAnswer(String QUESTIONS_UID) throws SQLException{
                 Commons commons = new Commons();
                 Statement statement = commons.getStatement();
                 HashMap<String, Object> QAListHash = new HashMap<>();
